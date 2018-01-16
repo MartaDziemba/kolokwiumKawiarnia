@@ -25,14 +25,14 @@ public class Main2Activity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<Coffee> kawy = new ArrayList<>();
-        kawy.add(new Coffee("Latte", "15.00 zł"));
-        kawy.add(new Coffee("Cappuccino", "12.00 zł"));
-        kawy.add(new Coffee("Americano", "10.00 zł"));
-        kawy.add(new Coffee("Espresso", "10.00 zł"));
-        kawy.add(new Coffee("Flat White", "12.00 zł"));
+        ArrayList<Coffee> coffees = new ArrayList<>();
+        coffees.add(new Coffee("Latte", "15.00 zł"));
+        coffees.add(new Coffee("Cappuccino", "12.00 zł"));
+        coffees.add(new Coffee("Americano", "10.00 zł"));
+        coffees.add(new Coffee("Espresso", "10.00 zł"));
+        coffees.add(new Coffee("Flat White", "12.00 zł"));
 
-        CoffeeAdapter coffeeAdaper = new CoffeeAdapter(kawy);
+        CoffeeAdapter coffeeAdaper = new CoffeeAdapter(coffees);
         recyclerView.setAdapter(coffeeAdaper);
     }
 }

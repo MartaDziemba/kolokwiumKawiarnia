@@ -25,7 +25,7 @@ public class CoffeeAdapter extends RecyclerView.Adapter<CoffeeAdapter.ViewHolder
     }
 
     @Override
-    public CoffeeAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemLayoutView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item, null);
         return new ViewHolder(itemLayoutView);
@@ -34,7 +34,7 @@ public class CoffeeAdapter extends RecyclerView.Adapter<CoffeeAdapter.ViewHolder
     @Override
     public void onBindViewHolder(CoffeeAdapter.ViewHolder holder, int position) {
         holder.setName(list.get(position).getName());
-        holder.setCoffeePrice(list.get(position).getCoffePrice());
+        holder.setCoffePrice(list.get(position).getCoffePrice());
     }
 
     @Override
@@ -75,7 +75,7 @@ public class CoffeeAdapter extends RecyclerView.Adapter<CoffeeAdapter.ViewHolder
             coffee.setText(name);
         }
 
-        public void setCoffeePrice(String coffePrice) {
+        public void setCoffePrice(String coffePrice) {
             price.setText(coffePrice);
         }
     }
